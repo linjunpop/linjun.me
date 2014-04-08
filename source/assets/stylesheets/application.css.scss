@@ -1,0 +1,43 @@
+$red: #C80909;
+
+body {
+  font-family: 'Avenir Next', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  background-color: #FCFCFC;
+
+  height: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+img {
+  border: 1px solid $red;
+  border-radius: 120px;
+  height: 120px;
+  width: 120px;
+}
+
+p {
+  text-align: center;
+  color: #26292D;
+  font-size: 2em;
+  font-weight: 100;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #C80909;
+  border-bottom: 1px dashed #FFCCCC;
+}
+
+p::selection {
+  background: $red;
+  color: #FFFFFF;
+}
+a::selection {
+  color: #FFCCCC;
+}
+
