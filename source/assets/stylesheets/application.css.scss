@@ -1,12 +1,25 @@
 $red: #C80909;
+$black: #333;
+$white: #fff;
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
 
 body {
   font-family: 'Avenir Next', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   background-color: #FCFCFC;
+  font-weight: 100;
 
-  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
 
+section {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -20,24 +33,31 @@ img {
   width: 120px;
 }
 
-p {
-  text-align: center;
-  color: #26292D;
-  font-size: 2em;
-  font-weight: 100;
+nav {
+  align-self: flex-start;
 }
 
-a, a:visited {
-  text-decoration: none;
-  color: #C80909;
-  border-bottom: 1px dashed #FFCCCC;
-}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
 
-p::selection {
-  background: $red;
-  color: #FFFFFF;
-}
-a::selection {
-  color: #FFCCCC;
+  li {
+    a {
+      text-decoration: none;
+      line-height: 2em;
+      color: $red;
+      border-bottom: 1px dashed lighten($red, 50%);
+
+      &:hover {
+        color: $white;
+        background-color: lighten($red, 20%);
+      }
+    }
+  }
 }
 
