@@ -1,9 +1,9 @@
-source 'http://ruby.taobao.org'
+source 'https://rubygems.org'
 
-gem "middleman", "~>3.2"
+gem "middleman", "~>3.3"
 
 # Live-reloading plugin
-gem "middleman-livereload", "~> 3.2"
+gem "middleman-livereload"
 
 gem "middleman-deploy"
 gem "middleman-autoprefixer"

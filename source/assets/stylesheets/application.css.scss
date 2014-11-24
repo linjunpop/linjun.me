@@ -10,6 +10,7 @@ $white: #fff;
 html, body {
   height: 100%;
   width: 100%;
+  min-height: 500px;
 }
 
 body {
@@ -43,35 +44,14 @@ h1 {
   @include typecsset-font-size(36px);
 }
 
-nav {
-  align-self: flex-start;
-}
+p {
+  @include typecsset-font-size(16px);
 
-ul {
-  margin: 0;
-  padding: 0;
+  a {
+    color: $black;
 
-  @include typecsset-space(margin-top);
-
-  list-style-type: none;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: flex-start;
-
-  li {
-    padding: 0 1rem;
-
-    a {
-      @include typecsset-font-size(16px);
-
-      display: block;
-      text-decoration: none;
-      color: $black;
-
-      &:hover {
-        color: $red;
-      }
+    &:hover {
+      color: $red;
     }
   }
 }
