@@ -1,6 +1,7 @@
 $typecsset-base-font-size: 16px;
 $typecsset-base-line-height: 24px;
 
+@import 'vendor/normalize';
 @import 'vendor/typecsset';
 
 $red: #C80909;
