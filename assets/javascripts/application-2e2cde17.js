@@ -1,1 +1,0 @@
-(function(){var e,t,n,i,a,c;(i=document.querySelector(".tick"))&&(c=new Date,n=new Date("August 31, 1988"),t=864e5,a=c.getTime()-n.getTime(),e=Math.floor(a/t),i.innerHTML=e)}).call(this);
