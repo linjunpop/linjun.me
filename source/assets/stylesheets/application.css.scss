@@ -11,6 +11,12 @@ $yellow: #FBE251;
 $main-color: #36563C;
 $secondry-color: #81C7D4;
 
+$break-small: 570px;
+
+@mixin on-small-screen {
+  @media only screen and (max-width: $break-small) { @content; }
+}
+
 .highlight {
   background-color: $yellow;
   padding-left: 12px;
@@ -61,6 +67,9 @@ h2 {
 p {
   @include typecsset-font-size(16px);
   color: #0F2540;
+  @include on-small-screen {
+    text-align: center;
+  }
 
   a {
     color: $black;
@@ -136,16 +145,29 @@ section {
 
   display: flex;
   flex-flow: row nowrap;
+  @include on-small-screen {
+    flex-flow: column nowrap;
+  }
 
   > .icon-container {
     flex: 2;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include on-small-screen {
+      order: 1;
+      margin: 0 0 5em 0;
+    }
   }
 
   > .info {
     flex: 3;
+    @include on-small-screen {
+      order: 2;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
   }
 }
 
