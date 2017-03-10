@@ -79,22 +79,42 @@ hr {
   padding: 0;
 }
 
+$icon-size: 100px;
 .icon {
-  width: 80px;
-  height: 80px;
+  border: 1px solid $secondry-color;
+  border-radius: $icon-size;
+  height: $icon-size;
+  width: $icon-size;
+  background-position: center;
+  background-size: ($icon-size*0.8) ($icon-size*0.8);
+  background-repeat: no-repeat;
+  margin: 0;
+
+  &.intro {
+    background-image: image-url("html.png");
+  }
+
+  &.languages {
+    background-image: image-url("elixir.png");
+  }
+
+  &.contact {
+    background-image: image-url("mail.png");
+  }
 }
 
 $avatar-size: 120px;
 div.avatar {
   @include typecsset-space(margin-bottom);
 
-  border: 1px solid $red;
+  border: 1px solid $main-color;
   border-radius: $avatar-size;
   height: $avatar-size;
   width: $avatar-size;
   background-image: url(http://s.gravatar.com/avatar/c7b8c0b4ef05e68e2c92cd912eca414b?s=360);
   background-position: center;
   background-size: $avatar-size $avatar-size;
+  background-repeat: no-repeat;
   margin: 0;
 }
 
