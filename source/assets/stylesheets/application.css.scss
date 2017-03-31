@@ -39,7 +39,7 @@ body {
 }
 
 footer {
-  padding: 3em 0 3em 0;
+  padding: 3rem 0 3rem 0;
   margin: 0;
   text-align: center;
 }
@@ -61,7 +61,10 @@ h2 {
   background-color: $yellow;
   display: inline-block;
   border-radius: 0.1em;
-  box-shadow: 0.5em -0.1em 0.5em #FBE251, 0.25em 0.1em 0.5em #FBE251, -0.5em 0.15em 0.5em #FBE251, -0.25em -0.1em 0.5em #FBE251;
+  box-shadow: 0.5rem -0.1rem 0.5rem #FBE251,
+    0.25rem 0.1rem 0.5rem #FBE251,
+    -0.5rem 0.15rem 0.5rem #FBE251,
+    -0.25rem -0.1rem 0.5rem #FBE251;
 }
 
 p {
@@ -128,7 +131,7 @@ div.avatar {
 }
 
 section {
-  margin: 5em 0;
+  margin: 5rem 0 3rem 0;
 
   display: flex;
   flex-flow: row nowrap;
@@ -143,7 +146,7 @@ section {
     justify-content: center;
     @include on-small-screen {
       order: 1;
-      margin: 0 0 5em 0;
+      margin: 0 0 5rem 0;
     }
   }
 
@@ -165,12 +168,11 @@ section {
 
 section.hero {
   margin-top: 0;
-  background-color: $yellow;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   min-height: 350px;
-  height: 60vh;
+  height: 75vh;
   width: 100%;
 
   h1 {
