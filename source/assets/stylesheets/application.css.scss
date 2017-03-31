@@ -8,6 +8,7 @@ $red: #C80909;
 $black: #333;
 $white: #fff;
 $yellow: #FBE251;
+$green: #91AD70;
 $main-color: #36563C;
 $secondry-color: #81C7D4;
 
@@ -56,15 +57,7 @@ h1 {
 }
 
 h2 {
-  @include typecsset-font-size(24px);
-  color: $main-color;
-  background-color: $yellow;
-  display: inline-block;
-  border-radius: 0.1em;
-  box-shadow: 0.5rem -0.1rem 0.5rem #FBE251,
-    0.25rem 0.1rem 0.5rem #FBE251,
-    -0.5rem 0.15rem 0.5rem #FBE251,
-    -0.25rem -0.1rem 0.5rem #FBE251;
+  color: $green;
 }
 
 p {
@@ -113,6 +106,14 @@ $icon-size: 100px;
   &.contact {
     background-image: image-url("mail.png");
   }
+
+  &.work-kaifa {
+    background-image: image-url("work-kaifa.png");
+  }
+
+  &.work-philter {
+    background-image: image-url("work-philter.png");
+  }
 }
 
 $avatar-size: 120px;
@@ -130,49 +131,81 @@ div.avatar {
   margin: 0;
 }
 
-section {
-  margin: 5rem 0 3rem 0;
-
-  display: flex;
-  flex-flow: row nowrap;
-  @include on-small-screen {
-    flex-flow: column nowrap;
-  }
-
-  > .icon-container {
-    flex: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include on-small-screen {
-      order: 1;
-      margin: 0 0 5rem 0;
-    }
-  }
-
-  > .info {
-    flex: 3;
-    @include on-small-screen {
-      order: 2;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-    }
-  }
-}
-
 %narrow-width {
   max-width: 500px;
   width: 60vw;
 }
+section.block {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 5rem 0;
+
+  h2 {
+    margin: 0 0 3rem 0;
+  }
+}
+
+section.intro {
+  @extend %narrow-width;
+  p {
+    text-align: center;
+  }
+}
+
+section.contact {
+  @extend %narrow-width;
+}
+
+section.works {
+  @extend %narrow-width;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  > .work {
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row nowrap;
+    @include on-small-screen {
+      flex-flow: column nowrap;
+    }
+
+    .icon-container {
+      flex: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include on-small-screen {
+        order: 1;
+        margin: 0 0 5rem 0;
+      }
+    }
+
+    .info {
+      flex: 3;
+      @include on-small-screen {
+        order: 2;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+      }
+
+      p {
+        hyphens: auto;
+      }
+    }
+  }
+}
 
 section.hero {
+  display: flex;
   margin-top: 0;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   min-height: 350px;
-  height: 75vh;
+  height: 60vh;
   width: 100%;
 
   h1 {
@@ -183,15 +216,4 @@ section.hero {
   }
 }
 
-section.intro {
-  @extend %narrow-width;
-}
-
-section.open-source {
-  @extend %narrow-width;
-}
-
-section.contact {
-  @extend %narrow-width;
-}
 
