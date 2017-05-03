@@ -7,4 +7,4 @@ gem "middleman-livereload"
 
 gem "middleman-autoprefixer"
 
-gem "mgd", git: "https://github.com/linjunpop/middleman-github-deploy.git", branch: "bundle-exec-middleman"
+gem "mgd"
