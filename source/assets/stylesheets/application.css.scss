@@ -18,6 +18,31 @@ $break-small: 570px;
   @media only screen and (max-width: $break-small) { @content; }
 }
 
+@keyframes heartbeat {
+  0% {
+    transform: scale( .25 );
+  }
+  20% {
+    transform: scale( .80 );
+  }
+  40% {
+    transform: scale( .35 );
+  }
+  60% {
+    transform: scale( 1 );
+  }
+  80% {
+    transform: scale( .75 );
+  }
+  100% {
+    transform: scale( .65 );
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s infinite;
+}
+
 .highlight {
   background-color: $yellow;
   padding-left: 12px;
@@ -34,7 +59,7 @@ html, body {
 }
 
 body {
-  font-family: -apple-system, 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   background-color: #FCFCFC;
 }
@@ -84,38 +109,6 @@ hr {
   padding: 0;
 }
 
-$icon-size: 100px;
-.icon {
-  border: 1px solid $secondry-color;
-  border-radius: $icon-size;
-  height: $icon-size;
-  width: $icon-size;
-  background-position: center;
-  background-size: ($icon-size*0.8) ($icon-size*0.8);
-  background-repeat: no-repeat;
-  margin: 0;
-
-  &.intro {
-    background-image: image-url("html.png");
-  }
-
-  &.languages {
-    background-image: image-url("elixir.png");
-  }
-
-  &.contact {
-    background-image: image-url("mail.png");
-  }
-
-  &.work-kaifa {
-    background-image: image-url("work-kaifa.png");
-  }
-
-  &.work-philter {
-    background-image: image-url("work-philter.png");
-  }
-}
-
 $avatar-size: 120px;
 div.avatar {
   @include typecsset-space(margin-bottom);
@@ -155,46 +148,25 @@ section.intro {
 
 section.contact {
   @extend %narrow-width;
-}
-
-section.works {
-  @extend %narrow-width;
 
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
+  justify-content: space-around;
 
-  > .work {
-    margin: 2rem 0;
-    display: flex;
-    flex-flow: row nowrap;
-    @include on-small-screen {
-      flex-flow: column nowrap;
-    }
+  .icon {
+    background-position: center;
+    height: 40px;
+    width: 40px;
+  }
 
-    .icon-container {
-      flex: 2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      @include on-small-screen {
-        order: 1;
-        margin: 0 0 5rem 0;
-      }
-    }
-
-    .info {
-      flex: 3;
-      @include on-small-screen {
-        order: 2;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-      }
-
-      p {
-        hyphens: auto;
-      }
-    }
+  .icon-github {
+    background-image: image-url("github.svg");
+  }
+  .icon-twitter {
+    background-image: image-url("twitter.svg");
+  }
+  .icon-gmail {
+    background-image: image-url("gmail.svg");
   }
 }
 
