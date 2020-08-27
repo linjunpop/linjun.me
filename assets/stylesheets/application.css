@@ -74,7 +74,7 @@ div.avatar {
   border-radius: 2rem;
   height: 2rem;
   width: 2rem;
-  background-image: url("assets/images/avatar.png");
+  background-image: url("/assets/images/avatar.png");
   background-position: center;
   background-size: 1.9rem 1.9rem;
   background-repeat: no-repeat;
