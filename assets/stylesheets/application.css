@@ -73,6 +73,10 @@ footer {
   justify-content: space-between;
 }
 
+footer p {
+  font-size: 1.4rem;
+}
+
 div.avatar {
   border: 1px solid #4a225d;
   border-radius: 2.7rem;
